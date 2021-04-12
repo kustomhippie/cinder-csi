@@ -1,0 +1,126 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: cinder-controller
+
+spec:
+  serviceName: cinder-controller
+  replicas: 1
+
+  template:
+    spec:
+      serviceAccount: cinder-controller
+
+      containers:
+        - name: csi-attacher
+          image: csi-attacher
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=/csi/csi.sock
+            - --timeout=3m
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+
+        - name: csi-provisioner
+          image: csi-provisioner
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=/csi/csi.sock
+            - --timeout=3m
+            - --default-fstype=ext4
+            - --feature-gates=Topology=true
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+
+        - name: csi-snapshotter
+          image: csi-snapshotter
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=/csi/csi.sock
+            - --timeout=3m
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+
+        - name: csi-resizer
+          image: csi-resizer
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=/csi/csi.sock
+            - --timeout=3m
+            - --handle-volume-inuse-error=false
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+
+        - name: liveness-probe
+          image: liveness-probe
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=/csi/csi.sock
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+
+        - name: csi-plugin
+          image: csi-plugin
+          imagePullPolicy: Always
+
+          args:
+            - cinder-csi-plugin
+            - --nodeid=$(NODE_ID)
+            - --endpoint=$(CSI_ENDPOINT)
+            - --cloud-config=$(CLOUD_CONFIG)
+            - --cluster=$(CLUSTER_NAME)
+
+          env:
+            - name: CSI_ENDPOINT
+              value: unix://csi/csi.sock
+            - name: CLOUD_CONFIG
+              value: /etc/config/cloud.conf
+            - name: CLUSTER_NAME
+              value: webhippie
+            - name: NODE_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+
+          ports:
+            - name: health
+              containerPort: 9808
+              protocol: TCP
+
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: health
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+            - name: config
+              mountPath: /etc/config
+              readOnly: true
+
+      volumes:
+        - name: socket
+          emptyDir: {}
+        - name: config
+          secret:
+            secretName: cinder-config
+
+...

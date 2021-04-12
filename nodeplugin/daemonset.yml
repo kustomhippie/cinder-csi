@@ -1,0 +1,129 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+
+metadata:
+  name: cinder-nodeplugin
+
+spec:
+  template:
+    spec:
+      serviceAccount: cinder-nodeplugin
+      hostNetwork: true
+
+      containers:
+        - name: csi-driver
+          image: csi-driver
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=$(ADDRESS)
+            - --kubelet-registration-path=$(DRIVER_REG_SOCK_PATH)
+
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - rm -rf /registration/cinder.csi.openstack.org /registration/cinder.csi.openstack.org-reg.sock
+
+          env:
+            - name: ADDRESS
+              value: /csi/csi.sock
+            - name: DRIVER_REG_SOCK_PATH
+              value: /var/lib/kubelet/plugins/cinder.csi.openstack.org/csi.sock
+            - name: KUBE_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+            - name: registration
+              mountPath: /registration
+
+        - name: liveness-probe
+          image: liveness-probe
+          imagePullPolicy: Always
+
+          args:
+            - --csi-address=/csi/csi.sock
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+
+        - name: csi-plugin
+          image: csi-plugin
+
+          args:
+            - cinder-csi-plugin
+            - --nodeid=$(NODE_ID)
+            - --endpoint=$(CSI_ENDPOINT)
+            - --cloud-config=$(CLOUD_CONFIG)
+
+          securityContext:
+            capabilities:
+              add:
+                - SYS_ADMIN
+            privileged: true
+            allowPrivilegeEscalation: true
+
+          env:
+            - name: CSI_ENDPOINT
+              value: unix://csi/csi.sock
+            - name: CLOUD_CONFIG
+              value: /etc/config/cloud.conf
+
+            - name: NODE_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+
+          ports:
+            - name: health
+              containerPort: 9808
+              protocol: TCP
+
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: health
+
+          volumeMounts:
+            - name: socket
+              mountPath: /csi
+            - name: kubelet
+              mountPath: /var/lib/kubelet
+              mountPropagation: "Bidirectional"
+            - name: probe
+              mountPath: /dev
+              mountPropagation: "HostToContainer"
+            - name: config
+              mountPath: /etc/config
+              readOnly: true
+
+      volumes:
+        - name: socket
+          hostPath:
+            path: /var/lib/kubelet/plugins/cinder.csi.openstack.org
+            type: DirectoryOrCreate
+        - name: registration
+          hostPath:
+            path: /var/lib/kubelet/plugins_registry/
+            type: Directory
+        - name: kubelet
+          hostPath:
+            path: /var/lib/kubelet
+            type: Directory
+        - name: probe
+          hostPath:
+            path: /dev
+            type: Directory
+        - name: config
+          secret:
+            secretName: cinder-config
+
+...
