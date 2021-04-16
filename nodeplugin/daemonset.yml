@@ -14,7 +14,7 @@ spec:
       containers:
         - name: csi-driver
           image: csi-driver
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=$(ADDRESS)
@@ -46,7 +46,7 @@ spec:
 
         - name: liveness-probe
           image: liveness-probe
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=/csi/csi.sock

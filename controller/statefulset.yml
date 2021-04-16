@@ -16,7 +16,7 @@ spec:
       containers:
         - name: csi-attacher
           image: csi-attacher
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=/csi/csi.sock
@@ -28,7 +28,7 @@ spec:
 
         - name: csi-provisioner
           image: csi-provisioner
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=/csi/csi.sock
@@ -42,7 +42,7 @@ spec:
 
         - name: csi-snapshotter
           image: csi-snapshotter
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=/csi/csi.sock
@@ -54,7 +54,7 @@ spec:
 
         - name: csi-resizer
           image: csi-resizer
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=/csi/csi.sock
@@ -67,7 +67,7 @@ spec:
 
         - name: liveness-probe
           image: liveness-probe
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - --csi-address=/csi/csi.sock
@@ -78,7 +78,7 @@ spec:
 
         - name: csi-plugin
           image: csi-plugin
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
 
           args:
             - cinder-csi-plugin
