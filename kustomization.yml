@@ -16,7 +16,7 @@ images:
     newTag: "v1.23.0"
   - name: csi-driver
     newName: k8s.gcr.io/sig-storage/csi-node-driver-registrar
-    newTag: "v2.5.0"
+    newTag: "v2.5.1"
   - name: csi-attacher
     newName: k8s.gcr.io/sig-storage/csi-attacher
     newTag: "v3.5.0"
