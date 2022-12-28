@@ -19,7 +19,7 @@ images:
     newTag: "v2.6.2"
   - name: csi-attacher
     newName: k8s.gcr.io/sig-storage/csi-attacher
-    newTag: "v4.0.0"
+    newTag: "v4.1.0"
   - name: csi-provisioner
     newName: k8s.gcr.io/sig-storage/csi-provisioner
     newTag: "v3.3.0"
