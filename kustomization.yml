@@ -28,7 +28,7 @@ images:
     newTag: "v6.2.0"
   - name: csi-resizer
     newName: k8s.gcr.io/sig-storage/csi-resizer
-    newTag: "v1.6.0"
+    newTag: "v1.7.0"
   - name: liveness-probe
     newName: k8s.gcr.io/sig-storage/livenessprobe
     newTag: "v2.9.0"
