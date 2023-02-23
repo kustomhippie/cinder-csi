@@ -13,7 +13,7 @@ commonLabels:
 images:
   - name: csi-plugin
     newName: k8scloudprovider/cinder-csi-plugin
-    newTag: "v1.26.0"
+    newTag: "v1.26.1"
   - name: csi-driver
     newName: k8s.gcr.io/sig-storage/csi-node-driver-registrar
     newTag: "v2.7.0"
