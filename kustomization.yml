@@ -16,7 +16,7 @@ images:
     newTag: "v1.26.2"
   - name: csi-driver
     newName: registry.k8s.io/sig-storage/csi-node-driver-registrar
-    newTag: "v2.7.0"
+    newTag: "v2.8.0"
   - name: csi-attacher
     newName: registry.k8s.io/sig-storage/csi-attacher
     newTag: "v4.2.0"
