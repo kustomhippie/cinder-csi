@@ -31,6 +31,6 @@ images:
     newTag: "v1.7.0"
   - name: liveness-probe
     newName: registry.k8s.io/sig-storage/livenessprobe
-    newTag: "v2.9.0"
+    newTag: "v2.10.0"
 
 ...
