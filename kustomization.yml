@@ -25,7 +25,7 @@ images:
     newTag: "v3.5.0"
   - name: csi-snapshotter
     newName: registry.k8s.io/sig-storage/csi-snapshotter
-    newTag: "v6.2.1"
+    newTag: "v6.2.2"
   - name: csi-resizer
     newName: registry.k8s.io/sig-storage/csi-resizer
     newTag: "v1.8.0"
