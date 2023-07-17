@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0](https://github.com/kustomhippie/cinder-csi/compare/v1.0.1...v2.0.0) (2023-07-17)
+
+
+### Features
+
+* **major:** update actionhippie/kustomize action to v2 ([0424f07](https://github.com/kustomhippie/cinder-csi/commit/0424f073a8c573d5f06549935ef3c80eac49d5bb))
+
 ## [1.0.1](https://github.com/kustomhippie/cinder-csi/compare/v1.0.0...v1.0.1) (2023-06-19)
 
 ## 1.0.0 (2023-06-05)
