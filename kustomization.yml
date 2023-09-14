@@ -25,12 +25,12 @@ images:
     newTag: "v3.6.0"
   - name: csi-snapshotter
     newName: registry.k8s.io/sig-storage/csi-snapshotter
-    newTag: "v6.2.2"
+    newTag: "v6.3.0"
   - name: csi-resizer
     newName: registry.k8s.io/sig-storage/csi-resizer
     newTag: "v1.9.0"
   - name: liveness-probe
     newName: registry.k8s.io/sig-storage/livenessprobe
-    newTag: "v2.10.0"
+    newTag: "v2.11.0"
 
 ...
