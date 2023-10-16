@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/kustomhippie/cinder-csi/compare/v2.1.0...v2.1.1) (2023-10-16)
+
+
+### Bugfixes
+
+* **deps:** update k8scloudprovider/cinder-csi-plugin docker tag to v1.26.4 ([19c0261](https://github.com/kustomhippie/cinder-csi/commit/19c02619881ee93fb19650fb410c61d4f37eacfc))
+
 ## [2.1.0](https://github.com/kustomhippie/cinder-csi/compare/v2.0.0...v2.1.0) (2023-09-18)
 
 
