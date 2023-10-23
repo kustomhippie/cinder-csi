@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.2](https://github.com/kustomhippie/cinder-csi/compare/v2.1.1...v2.1.2) (2023-10-23)
+
+
+### Bugfixes
+
+* **deps:** update patch versions ([1d26a4f](https://github.com/kustomhippie/cinder-csi/commit/1d26a4f71f07fc799e95266431dee94c53a26d8d))
+* **deps:** update registry.k8s.io/sig-storage/csi-snapshotter docker tag to v6.3.1 ([a94cdfe](https://github.com/kustomhippie/cinder-csi/commit/a94cdfe4615c0bfd7e5ea9d9219317d97b678e32))
+
 ## [2.1.1](https://github.com/kustomhippie/cinder-csi/compare/v2.1.0...v2.1.1) (2023-10-16)
 
 
