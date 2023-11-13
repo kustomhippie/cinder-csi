@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/kustomhippie/cinder-csi/compare/v2.1.2...v2.1.3) (2023-11-13)
+
+
+### Bugfixes
+
+* **deps:** update patch versions ([36e122f](https://github.com/kustomhippie/cinder-csi/commit/36e122f34dcd296a0f98f5fd6131c16b4370bc00))
+
 ## [2.1.2](https://github.com/kustomhippie/cinder-csi/compare/v2.1.1...v2.1.2) (2023-10-23)
 
 
