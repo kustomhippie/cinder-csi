@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.4](https://github.com/kustomhippie/cinder-csi/compare/v2.1.3...v2.1.4) (2023-12-11)
+
+
+### Bugfixes
+
+* **deps:** update registry.k8s.io/sig-storage/csi-node-driver-registrar docker tag to v2.9.2 ([42d7dce](https://github.com/kustomhippie/cinder-csi/commit/42d7dceee551b494ffb2d5b041da65c965dc0262))
+
 ## [2.1.3](https://github.com/kustomhippie/cinder-csi/compare/v2.1.2...v2.1.3) (2023-11-13)
 
 
