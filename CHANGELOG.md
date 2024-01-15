@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0.0](https://github.com/kustomhippie/cinder-csi/compare/v2.1.5...v3.0.0) (2024-01-15)
+
+
+### Features
+
+* **deps:** update minor versions ([e9e2c70](https://github.com/kustomhippie/cinder-csi/commit/e9e2c7008478b288e517b8670bb6b5de621f894c))
+* **deps:** update registry.k8s.io/sig-storage/csi-node-driver-registrar docker tag to v2.10.0 ([c5539b7](https://github.com/kustomhippie/cinder-csi/commit/c5539b756a2144bac690e788a0c9d8f5efe31835))
+* **deps:** update registry.k8s.io/sig-storage/csi-provisioner docker tag to v4 ([55b33dc](https://github.com/kustomhippie/cinder-csi/commit/55b33dc474415f0e8e8051b2527fff06a52f8caf))
+
 ## [2.1.5](https://github.com/kustomhippie/cinder-csi/compare/v2.1.4...v2.1.5) (2024-01-01)
 
 
