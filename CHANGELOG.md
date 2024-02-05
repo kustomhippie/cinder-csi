@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.0](https://github.com/kustomhippie/cinder-csi/compare/v3.0.0...v4.0.0) (2024-02-05)
+
+
+### Features
+
+* **deps:** update registry.k8s.io/sig-storage/csi-resizer docker tag to v1.10.0 ([84821e9](https://github.com/kustomhippie/cinder-csi/commit/84821e9f9f6646804ed7a1cb0eb82e456d428f6d))
+* **deps:** update registry.k8s.io/sig-storage/csi-snapshotter docker tag to v7 ([69c6a05](https://github.com/kustomhippie/cinder-csi/commit/69c6a0595f2d0c7e20ef01bfb1054b2d7766a93e))
+
 ## [3.0.0](https://github.com/kustomhippie/cinder-csi/compare/v2.1.5...v3.0.0) (2024-01-15)
 
 
