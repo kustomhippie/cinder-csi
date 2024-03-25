@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/kustomhippie/cinder-csi/compare/v4.0.1...v4.0.2) (2024-03-25)
+
+
+### Bugfixes
+
+* **deps:** update patch versions ([2d632ac](https://github.com/kustomhippie/cinder-csi/commit/2d632accb2bad064e1a8dafe169ed2bad813130e))
+
 ## [4.0.1](https://github.com/kustomhippie/cinder-csi/compare/v4.0.0...v4.0.1) (2024-02-19)
 
 
