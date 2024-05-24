@@ -19,7 +19,7 @@ images:
     newTag: "v2.10.1"
   - name: csi-attacher
     newName: registry.k8s.io/sig-storage/csi-attacher
-    newTag: "v4.5.1"
+    newTag: "v4.6.0"
   - name: csi-provisioner
     newName: registry.k8s.io/sig-storage/csi-provisioner
     newTag: "v4.0.1"
