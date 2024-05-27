@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.0.0](https://github.com/kustomhippie/cinder-csi/compare/v4.0.2...v5.0.0) (2024-05-27)
+
+
+### Features
+
+* **deps:** update major versions ([2831bd2](https://github.com/kustomhippie/cinder-csi/commit/2831bd2b876662da79f4b2f58aa7dd8a0a132c47))
+* **deps:** update registry.k8s.io/sig-storage/csi-attacher docker tag to v4.6.0 ([7afd93c](https://github.com/kustomhippie/cinder-csi/commit/7afd93c8f2dad98d17b6dc01d9830f367c5b2248))
+* **deps:** update registry.k8s.io/sig-storage/csi-resizer docker tag to v1.11.0 ([3b6975e](https://github.com/kustomhippie/cinder-csi/commit/3b6975e7fbee18071c49887275f33225f7303425))
+
 ## [4.0.2](https://github.com/kustomhippie/cinder-csi/compare/v4.0.1...v4.0.2) (2024-03-25)
 
 
