@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.1](https://github.com/kustomhippie/cinder-csi/compare/v5.0.0...v5.0.1) (2024-06-10)
+
+
+### Bugfixes
+
+* **deps:** update patch versions ([9203b9e](https://github.com/kustomhippie/cinder-csi/commit/9203b9ec1d9fe47b8894a2c6bba085a1a3abd6dd))
+
 ## [5.0.0](https://github.com/kustomhippie/cinder-csi/compare/v4.0.2...v5.0.0) (2024-05-27)
 
 
