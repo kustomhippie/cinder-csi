@@ -28,7 +28,7 @@ images:
     newTag: "v8.0.1"
   - name: csi-resizer
     newName: registry.k8s.io/sig-storage/csi-resizer
-    newTag: "v1.11.1"
+    newTag: "v1.11.2"
   - name: liveness-probe
     newName: registry.k8s.io/sig-storage/livenessprobe
     newTag: "v2.13.1"
