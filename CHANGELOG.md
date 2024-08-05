@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.1](https://github.com/kustomhippie/cinder-csi/compare/v5.1.0...v5.1.1) (2024-08-05)
+
+
+### Bugfixes
+
+* **deps:** update registry.k8s.io/sig-storage/csi-resizer docker tag to v1.11.2 ([2640620](https://github.com/kustomhippie/cinder-csi/commit/264062055cfaf376dafe418e81e683afaf39a10d))
+
 ## [5.1.0](https://github.com/kustomhippie/cinder-csi/compare/v5.0.1...v5.1.0) (2024-07-22)
 
 
