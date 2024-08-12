@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.2](https://github.com/kustomhippie/cinder-csi/compare/v5.1.1...v5.1.2) (2024-08-12)
+
+
+### Bugfixes
+
+* **deps:** update registry.k8s.io/sig-storage/csi-provisioner docker tag to v5.0.2 ([261eca0](https://github.com/kustomhippie/cinder-csi/commit/261eca0eeb8fb2982b6d55c403009e0c968de72f))
+
 ## [5.1.1](https://github.com/kustomhippie/cinder-csi/compare/v5.1.0...v5.1.1) (2024-08-05)
 
 
