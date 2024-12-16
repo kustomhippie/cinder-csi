@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.3.0](https://github.com/kustomhippie/cinder-csi/compare/v5.2.0...v5.3.0) (2024-12-16)
+
+
+### Features
+
+* **deps:** update registry.k8s.io/sig-storage/csi-snapshotter docker tag to v8.2.0 ([#81](https://github.com/kustomhippie/cinder-csi/issues/81)) ([a60b34d](https://github.com/kustomhippie/cinder-csi/commit/a60b34d95ce01e737e41ab6d26b7af1a49c33db8))
+
 ## [5.2.0](https://github.com/kustomhippie/cinder-csi/compare/v5.1.2...v5.2.0) (2024-09-02)
 
 
