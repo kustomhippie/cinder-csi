@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.6.1](https://github.com/kustomhippie/cinder-csi/compare/v5.6.0...v5.6.1) (2025-03-03)
+
+
+### Bugfixes
+
+* **deps:** update patch versions ([#85](https://github.com/kustomhippie/cinder-csi/issues/85)) ([6a2e1e0](https://github.com/kustomhippie/cinder-csi/commit/6a2e1e0e48ab7f8c2c98e0ef6036c2e413386bef))
+
 ## [5.6.0](https://github.com/kustomhippie/cinder-csi/compare/v5.5.0...v5.6.0) (2025-01-27)
 
 
