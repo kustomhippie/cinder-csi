@@ -16,13 +16,13 @@ images:
     newTag: "v1.26.4"
   - name: csi-driver
     newName: registry.k8s.io/sig-storage/csi-node-driver-registrar
-    newTag: "v2.13.0"
+    newTag: "v2.14.0"
   - name: csi-attacher
     newName: registry.k8s.io/sig-storage/csi-attacher
-    newTag: "v4.8.1"
+    newTag: "v4.9.0"
   - name: csi-provisioner
     newName: registry.k8s.io/sig-storage/csi-provisioner
-    newTag: "v5.2.0"
+    newTag: "v5.3.0"
   - name: csi-snapshotter
     newName: registry.k8s.io/sig-storage/csi-snapshotter
     newTag: "v8.2.1"
@@ -31,6 +31,6 @@ images:
     newTag: "v1.13.2"
   - name: liveness-probe
     newName: registry.k8s.io/sig-storage/livenessprobe
-    newTag: "v2.15.0"
+    newTag: "v2.16.0"
 
 ...
