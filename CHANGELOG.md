@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.8.0](https://github.com/kustomhippie/cinder-csi/compare/v5.7.0...v5.8.0) (2025-06-23)
+
+
+### Features
+
+* **deps:** update minor versions ([#87](https://github.com/kustomhippie/cinder-csi/issues/87)) ([ac28abe](https://github.com/kustomhippie/cinder-csi/commit/ac28abeaf550622072c50665d6c9eb4d73a3cfc3))
+
 ## [5.7.0](https://github.com/kustomhippie/cinder-csi/compare/v5.6.1...v5.7.0) (2025-06-09)
 
 
